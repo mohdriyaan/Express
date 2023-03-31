@@ -16,6 +16,7 @@ app.post("/post/:id",(req,res)=>{
     console.log(req.originalUrl) // same as url
     console.log(req.url)
     console.log(req.params)
+    console.log(req.host)
 })
 
 app.get("/redirect",(req,res)=>{

@@ -14,6 +14,7 @@ Features Of Express :-
 3. Routing
 4. Template Engine
 5. Debugging
+6. Isomnia
 
 Installation Of Express :-
 1. npm init -y
@@ -30,13 +31,15 @@ Client can be
 4. Curl
 5. Wget
 
+Server (Ubuntu Machine) / GCP
+1. ExpressJS
+// Database :- MongoDB
+
 GET => Data Fetch // all Browsers use this
 POST => Date Write Add
 PUT => Data Update
 DELETE => Data DELETE
 
-res.send() => Plain Text / HTML
-res.json() => 
 
 Express CheatSheet
 
@@ -46,9 +49,17 @@ Express CheatSheet
 
 3. Do not send multiple responses
 
-4.
+Express Middleware :-
 
-5.
+1. Application - Level ==> app.use(express.json()) , app.use("/admin",adminAPI)
+2. Router Level ==> router.get("")
+3. Built-in Level ==> express.json() , express.static()
+4. 3rd Party Middleware ==> body-parser , multer:- used for file uploading .
+5. Error Handling ==> Express always follows top to bottom .
+    
+    app.use((req,res)=>{
+    res.status(404).json({msg : "Invalid Route"})
+})
 
 
 
